@@ -3,3 +3,217 @@ app-root #loading {
   margin-left: 45%;
   margin-top: 20%;
 }
+
+/*---------------------------------------- Header --------------------------------------*/
+header {
+  position: relative;
+  background-color: #02bac5;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  display: block;
+}
+
+header #LogoDiv {
+  position: absolute;
+  background-color: #008da1;
+  /*opacity: 0.8;*/
+  width: 120px;
+  height: 100px;
+  margin-left: 5%;
+  margin-top: 0;
+  z-index: 1;
+}
+
+#LogoDiv #BrandLogo {
+  position: absolute;
+  height: 60px;
+  width: 80px;
+  margin-left: 23px;
+  margin-top: 0px;
+}
+
+#LogoDiv #BrandName {
+  position: absolute;
+  font-family: Old English Text MT, sans-serif;
+  font-size: 20px;
+  color: #f0efee;
+  margin-top: 60px;
+  margin-left: 35px;
+}
+
+#LogoDiv #BrandName:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+/*header navigation floating to the right*/
+header #RightNavigation {
+  margin-left: 80%;
+  position: absolute;
+  margin-top: 20px;
+}
+
+header #RightNavigation a {
+  text-decoration: none;
+  color: rgb(239, 235, 232);
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+header #RightNavigation a:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+/* ========================== Body =========================*/
+#backgroundDiv{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 600px;
+}
+#LandingBackgoundImg{
+  position: absolute;
+  width: 100%;
+  height:100% ;
+}
+#BackgroundOverlay{
+  position: absolute;
+  background-color: #8c8c8c;
+  width: 100%;
+  height:100% ;
+  opacity: 0.6;
+}
+#LandingMotoText1{
+  z-index: 1;
+  position: absolute;
+  font-family: Georgia,sans-serif;
+  color: #ffffff;
+  margin-top: 12%;
+  margin-left: 21%;
+  font-size: 50px;
+}
+#LandingMotoText2{
+  z-index: 1;
+  position: absolute;
+  font-family: Segoe Script,sans-serif;
+  color: #ffffff;
+  margin-left: 40%;
+  margin-top: 20%;
+  font-size: 35px;
+}
+
+/*=====================  Buttons ====================*/
+.learnMoreButton{
+  font-family: Times New Roman,sans-serif;
+  background-color: #008da1;
+  color: #f8f7f6;
+  z-index: 1;
+  position: absolute;
+  margin-top: 29%;
+  margin-left: 42%;
+  padding: 9px;
+  padding-left: 30px;
+  font-size: 24px;
+  width: 170px;
+}
+.learnMoreButton:hover{
+  background-color: #02bac5;
+  cursor: pointer;
+}
+
+/*============================ Footer ======================*/
+footer{
+  background-color: #02bac5;
+  width: 100%;
+  height: 152px;
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+.FooterLeft a{
+  text-decoration: none;
+  color: rgb(239, 235, 232);;
+  display: block;
+  margin: 5px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  width: 220px;
+
+}
+.FooterLeft a:hover{
+  color: #ffffff;
+  cursor: pointer;
+}
+.FooterRight{
+  padding: 0;
+}
+.FooterRight h3{
+  color: #ffffff;
+  text-align: center;
+}
+.FooterRight p{
+  font-size: 12px;
+  color: #ffffff;
+  margin-left: 15px;
+}
+.FooterCenter{
+  margin-top: 5%;
+}
+.FooterCenter a{
+  color: #ffffff;
+  width: 2px;
+  margin-right: 20px;
+
+}
+.FooterCenter a:hover
+{
+  cursor: pointer;
+}
+
+/*=================== font awsome icons =====================*/
+.fa-map-marker
+{  color:#f8f7f6;
+  margin-right: 30px;
+}
+.fa-map-marker:hover{
+  color:#ffffff;
+  cursor: pointer;
+}
+
+.fa-volume-control-phone
+{
+  color:#f8f7f6;
+  margin-right: 30px;
+}
+.fa-volume-control-phone:hover{
+  color:#ffffff;
+  cursor: pointer;
+}
+.fa-envelope-o{
+  color:#f8f7f6;
+  margin-right: 30px;
+}
+.fa-envelope-o:hover{
+  color:#ffffff;
+  cursor: pointer;
+}
+.fa-instagram{
+  color:#f8f7f6;
+}
+.fa-instagram:hover{
+  color:#e95950}
+
+.fa-facebook-square{
+  color:#f8f7f6;
+}
+.fa-facebook-square:hover{
+  color:#3b5998}
+
+.fa-snapchat-square{
+  color: #ffffff;
+}
+.fa-snapchat-square:hover{
+  color: #fffc00;
+}
