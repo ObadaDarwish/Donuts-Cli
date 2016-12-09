@@ -3,12 +3,19 @@
  */
 import {ModuleWithProviders}  from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {LearnMoreComponent} from './learn-more/learn-more.component'
 import {HomeComponent} from './home/home.component';
+import {ProductsComponent} from './products/products.component';
+import {CateringComponent} from './catering/catering.component';
+
+
 const MainRoute: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
   {path: 'Home', component: HomeComponent},
-  {path: 'LearnMore', component: LearnMoreComponent},
+  {path: 'Products', component:ProductsComponent},
+  {path: 'Catering', component:CateringComponent},
+
+
+
 
 ];
 
