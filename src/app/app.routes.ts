@@ -6,15 +6,29 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {ProductsComponent} from './products/products.component';
 import {CateringComponent} from './catering/catering.component';
+import {DonutsComponent} from './products/donuts/donuts.component';
+import {HotBeveragesComponent} from './products/hot-beverages/hot-beverages.component';
+import {IceBeveragesComponent} from './products/ice-beverages/ice-beverages.component';
 
 
 const MainRoute: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
   {path: 'Home', component: HomeComponent},
-  {path: 'Products', component:ProductsComponent},
-  {path: 'Catering', component:CateringComponent},
 
+  // products
+  {
+    path: 'Products', component: ProductsComponent,
+    children: [
+      {path: '', redirectTo: 'Donuts', pathMatch: 'full'},
+      {path: 'Donuts', component: DonutsComponent},
+      {path: 'HotBeverage', component: HotBeveragesComponent},
+      {path: 'IceBeverage', component: IceBeveragesComponent}
+    ]
+  },
 
+  // catering route
+
+  {path: 'Catering', component: CateringComponent},
 
 
 ];

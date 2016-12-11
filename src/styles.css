@@ -17,19 +17,19 @@ header {
 header #LogoDiv {
   position: absolute;
   background-color: #008da1;
-  /*opacity: 0.8;*/
-  width: 120px;
-  height: 100px;
-  margin-left: 5%;
+  /* opacity: 0.8; */
+  width: 150px;
+  height: 140px;
+  margin-left: 8%;
   margin-top: 0;
   z-index: 1;
 }
 
 #LogoDiv #BrandLogo {
   position: absolute;
-  height: 60px;
-  width: 80px;
-  margin-left: 23px;
+  height: 100px;
+  width: 100px;
+  margin-left: 30px;
   margin-top: 0px;
 }
 
@@ -38,14 +38,25 @@ header #LogoDiv {
   font-family: Old English Text MT, sans-serif;
   font-size: 20px;
   color: #f0efee;
-  margin-top: 60px;
-  margin-left: 35px;
+  margin-top: 65%;
+  margin-left: 13%;
 }
+
 
 #LogoDiv #BrandName:hover {
   color: #ffffff;
   cursor: pointer;
 }
+#LogoDiv #BrandName::after
+{
+  background-color: #ffffff;
+  height: 1px;
+  display: block;
+  width: 35%;
+  margin-left: 30%;
+  content: ' ';
+}
+
 /*header navigation floating to the right*/
 header #RightNavigation {
   margin-left: 80%;
@@ -83,7 +94,7 @@ header #RightNavigation a:hover {
   background-color: #8c8c8c;
   width: 100%;
   height: inherit;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 #LandingMotoText1{
   z-index: 1;
@@ -104,23 +115,81 @@ header #RightNavigation a:hover {
   font-size: 35px;
 }
 
-/*=====================  Buttons ====================*/
-.learnMoreButton{
-  font-family: Times New Roman,sans-serif;
-  background-color: #008da1;
-  color: #f8f7f6;
-  z-index: 1;
+/*=====================  Webstte Main Navigation ====================*/
+.MainNavifation{
   position: absolute;
-  margin-top: 29%;
-  margin-left: 42%;
-  padding: 9px;
-  padding-left: 30px;
-  font-size: 24px;
-  width: 170px;
+  margin-top: 35%;
+
 }
-.learnMoreButton:hover{
-  background-color: #02bac5;
+.MainNavifation .row div{
+  background-color: white;
+  opacity: 1;
+  margin: 1%;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.MainNavifation .row div:hover{
+  opacity:0.6;
   cursor: pointer;
+}
+.MainNavifation .row div a{
+   color:black;
+   font-family: Georgia,sans-serif;
+   font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+ }
+
+/*============================ ProductsContiner ================================= */
+
+.ProductsContiner{
+  position: relative;
+  display: block;
+  background-color: #ffffff;
+  min-height: 760px;
+}
+.ProductsContiner img{
+  position: absolute;
+  width: 100%;
+}
+.ProductsContiner .menuContainer{
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 0%;
+}
+.ProductsContiner .menu
+{
+  position: relative;
+  margin-left: 20%;
+}
+
+/*product Navigation*/
+.productNavigation{
+  position: relative;
+  display: block;
+  background-color: #008da1;
+  width: auto;
+  height: auto;
+  margin-top: 8%;
+  margin-left: 45.9%;
+}
+.productNavigation .tab{
+  display: inline-block;
+ width: 200px;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.productNavigation .tab:hover{
+background-color: #02bac5;
+  cursor: pointer;
+}
+.productNavigation .tab a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Georgia,sans-serif;
 }
 
 /*============================ Footer ======================*/
@@ -141,7 +210,7 @@ footer{
   margin: 5px;
   margin-bottom: 15px;
   margin-top: 10px;
-  width: 220px;
+  width: auto;
 
 }
 .FooterLeft a:hover{
@@ -172,6 +241,21 @@ footer{
 .FooterCenter a:hover
 {
   cursor: pointer;
+}
+
+
+/*---------------------------------- spaces -----------------------------------------------------*/
+.spaceing {
+  height: 20px;
+}
+.spaceing .sm {
+  height: 30px;
+}
+.spaceing .md {
+  height: 50px;
+}
+.spaceing .lg
+{  height: 100px;
 }
 /*=================== font awsome icons =====================*/
 .fa-map-marker

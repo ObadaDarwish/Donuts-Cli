@@ -6,6 +6,7 @@ import { CateringComponent } from './catering.component';
   imports: [
     CommonModule
   ],
-  declarations: [CateringComponent]
+  declarations: [CateringComponent],
+  exports:[CateringComponent]
 })
 export class CateringModule { }
