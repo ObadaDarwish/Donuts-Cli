@@ -148,38 +148,41 @@ header #RightNavigation a:hover {
   display: block;
   background-color: #ffffff;
   min-height: 760px;
+  margin: 0;
 }
 .ProductsContiner img{
   position: absolute;
   width: 100%;
 }
 .ProductsContiner .menuContainer{
-  position: absolute;
-  margin-top: 5%;
-  margin-left: 0%;
-}
-.ProductsContiner .menu
-{
   position: relative;
-  margin-left: 20%;
+  margin-top: 0%;
+  margin-left: 12%;
 }
+
 
 /*product Navigation*/
 .productNavigation{
-  position: relative;
+  position: absolute;
   display: block;
   background-color: #008da1;
-  width: auto;
+  width: 52%;
   height: auto;
-  margin-top: 8%;
-  margin-left: 45.9%;
+  margin-top: 12%;
+  margin-left: 22%;
+  padding-top: 0%;
 }
+
+
 .productNavigation .tab{
   display: inline-block;
  width: 200px;
   text-align: center;
   padding-top: 1%;
   padding-bottom: 1%;
+}
+.productNavigation div.tab.active{
+  background-color:#02bac5 ;
 }
 .productNavigation .tab:hover{
 background-color: #02bac5;
@@ -190,6 +193,47 @@ background-color: #02bac5;
   text-decoration: none;
   font-size: 25px;
   font-family: Georgia,sans-serif;
+}
+.ProductsContiner .menu
+{
+  position: relative;
+  margin-left: 0%;
+  margin-top: 15%;
+}
+/*----------------------- items container ------------------------------------*/
+
+.itemContainer{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+}
+.itemContainer img{
+  position: relative;
+  width: 100%;
+
+}
+.itemContainer p{
+  position: relative;
+  color: #008da1;
+  font-size: 20px;
+  font-family: Georgia, sans-serif
+}
+.itemContainer .itemTitle
+{
+  position: absolute;
+  z-index: 1;
+  width: 60%;
+  height: 10%;
+  text-align: center;
+  margin-left: 18.5%;
+  margin-top: 27%;
+  background-color: #ffffff;
+}
+.itemTitle p
+{
+  color:#008da1;
+  margin-top: 3%;
 }
 
 /*============================ Footer ======================*/
@@ -205,7 +249,7 @@ footer{
 
 .FooterLeft a{
   text-decoration: none;
-  color: rgb(239, 235, 232);;
+  color: rgb(239, 235, 232);
   display: block;
   margin: 5px;
   margin-bottom: 15px;
@@ -248,13 +292,13 @@ footer{
 .spaceing {
   height: 20px;
 }
-.spaceing .sm {
+.spaceing-sm {
   height: 30px;
 }
-.spaceing .md {
+.spaceing-md {
   height: 50px;
 }
-.spaceing .lg
+.spaceing-lg
 {  height: 100px;
 }
 /*=================== font awsome icons =====================*/

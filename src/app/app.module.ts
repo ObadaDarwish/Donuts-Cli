@@ -9,11 +9,10 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {ProductsModule} from './products/products.module';
 import {CateringModule} from './catering/catering.module';
-
 @NgModule({
   declarations: [AppComponent,FooterComponent,HeaderComponent],
   imports: [BrowserModule, FormsModule, HttpModule,HomeModule,ProductsModule,CateringModule,MainRouting], /*import modules,Routes*/
-  providers: [],
+   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

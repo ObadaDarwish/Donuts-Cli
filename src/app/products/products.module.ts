@@ -5,7 +5,8 @@ import { DonutsComponent } from './donuts/donuts.component';
 import { HotBeveragesComponent } from './hot-beverages/hot-beverages.component';
 import { IceBeveragesComponent } from './ice-beverages/ice-beverages.component';
 import {MainRouting} from '../app.routes';
-
+import {productervice} from './productService';
+import {LoadChildData} from '../guard/ChildLoad';
 @NgModule({
   imports: [
     CommonModule,
@@ -13,6 +14,8 @@ import {MainRouting} from '../app.routes';
 
   ],
   declarations: [ProductsComponent, DonutsComponent, HotBeveragesComponent, IceBeveragesComponent],
-  exports:[ProductsComponent]
+  exports:[ProductsComponent],
+  providers : [productervice/*,LoadChildData*/]
+
 })
 export class ProductsModule { }
