@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class productervice {
-
+  // DonutMenu:any=[];
   constructor(private http: Http) { }
 
   getDonuts(): Observable <any> {
@@ -23,5 +23,28 @@ export class productervice {
 
   }
 
+
+  getHotBeverages(): Observable <any> {
+  let headers = new Headers();
+  let options = new RequestOptions({headers: headers});
+  headers.append('Content-Type', 'application/json');
+  headers.append('Access-Control-Allow-Origin', '*');
+  return this.http.get('http://localhost:8000/getHotBeaverages', options)
+    .map(response => {
+      return response.json().Beverage;
+    });
+
+}
+  getIceBeverages(): Observable <any> {
+    let headers = new Headers();
+    let options = new RequestOptions({headers: headers});
+    headers.append('Content-Type', 'application/json');
+    headers.append('Access-Control-Allow-Origin', '*');
+    return this.http.get('http://localhost:8000/getIceBeaverages', options)
+      .map(response => {
+        return response.json().Beverage;
+      });
+
+  }
 
 }

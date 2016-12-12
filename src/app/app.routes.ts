@@ -9,7 +9,7 @@ import {CateringComponent} from './catering/catering.component';
 import {DonutsComponent} from './products/donuts/donuts.component';
 import {HotBeveragesComponent} from './products/hot-beverages/hot-beverages.component';
 import {IceBeveragesComponent} from './products/ice-beverages/ice-beverages.component';
-import {LoadChildData} from './guard/ChildLoad';
+
 
 const MainRoute: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
@@ -17,7 +17,7 @@ const MainRoute: Routes = [
 
   // products
   {
-    path: 'Products', component: ProductsComponent/*,  resolve: { load: LoadChildData}*/,
+    path: 'Products', component: ProductsComponent ,
     children: [
       {path: '', redirectTo: 'Donuts', pathMatch: 'full'},
       {path: 'Donuts', component: DonutsComponent},

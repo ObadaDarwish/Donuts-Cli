@@ -157,7 +157,7 @@ header #RightNavigation a:hover {
 .ProductsContiner .menuContainer{
   position: relative;
   margin-top: 0%;
-  margin-left: 12%;
+  margin-left: 3%;
 }
 
 
@@ -166,10 +166,10 @@ header #RightNavigation a:hover {
   position: absolute;
   display: block;
   background-color: #008da1;
-  width: 52%;
+  width: 39.5%;
   height: auto;
   margin-top: 12%;
-  margin-left: 22%;
+  margin-left: 28%;
   padding-top: 0%;
 }
 
@@ -197,7 +197,7 @@ background-color: #02bac5;
 .ProductsContiner .menu
 {
   position: relative;
-  margin-left: 0%;
+  margin-left: 12%;
   margin-top: 15%;
 }
 /*----------------------- items container ------------------------------------*/
@@ -207,6 +207,8 @@ background-color: #02bac5;
   width: 500px;
   height: 500px;
   text-align: center;
+  margin-right: 6%;
+  margin-bottom: 10%;
 }
 .itemContainer img{
   position: relative;

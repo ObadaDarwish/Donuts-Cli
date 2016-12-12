@@ -1,29 +1,22 @@
 import {Component, OnInit, AfterContentInit, OnChanges} from '@angular/core';
-import {productervice} from './productService';
+import {productervice} from '../products/productService';
+import {ActivatedRoute} from '@angular/router';
+
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnChanges {
-  IsDataAvailable: boolean;
-  DonutMenu: any;
+export class ProductsComponent implements OnInit {
 
-  constructor(private  products: productervice) {
-    this.IsDataAvailable = false;
+
+  constructor() {
+
   }
 
-  ngOnChanges() {
-    this.products.getDonuts().subscribe(
-      (donuts)=> {
-        this.DonutMenu = donuts;
-        this.IsDataAvailable = true;
+  ngOnInit() {
 
-      }
-      , (error)=> {
-        console.log("Can not load Donuts : " + error);
-      }
-    );
   }
 
 

@@ -1,3 +1,14 @@
-<p>
-  ice-beverages works!
-</p>
+
+<div class="row">
+  <div class="itemContainer col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngFor="let beverage of IceBeaverage ">
+    <div class="itemTitle">
+      <p>{{beverage[0]}}</p>
+    </div>
+    <img src="../../../assets/imgs/background2.jpg" alt="">
+    <div class="spaceing-sm"></div>
+    <p >{{beverage[1]}}</p>
+  </div>
+</div>
+
+
+

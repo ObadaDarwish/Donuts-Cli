@@ -1,17 +1,16 @@
-<div *ngIf="IsDataAvailable">
-<div *ngFor="let donut of product">
-<div class="container">
+
+
+
 <div class="row">
-  <div class="itemContainer col-lg-6 col-md-5 col-sm-5 col-xs-5" >
+  <div class="itemContainer col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngFor="let donut of DonutMenu ">
   <div class="itemTitle">
-    <p>sdsdsd</p>
+    <p>{{donut[0]}}</p>
   </div>
   <img src="../../../assets/imgs/background2.jpg" alt="">
   <div class="spaceing-sm"></div>
-  <p >sdsds</p>
+  <p >{{donut[1]}}</p>
 </div>
 </div>
-</div>
-</div>
-</div>
+
+
 

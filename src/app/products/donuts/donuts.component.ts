@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {productervice} from '../productService';
 @Component({
   selector: 'app-donuts',
   templateUrl: './donuts.component.html',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonutsComponent implements OnInit {
 
-  constructor() { }
+  DonutMenu:any;
+  constructor(private  products: productervice) {
+
+  }
 
   ngOnInit() {
+    this.products.getDonuts().subscribe(
+      (donuts)=> {
+        this.DonutMenu = donuts;
+      }
+      , (error)=> {
+        console.log("Can not load Donuts : " + error);
+      }
+    );
   }
 
 }
