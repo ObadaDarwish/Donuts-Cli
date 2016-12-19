@@ -7,8 +7,8 @@ import { Http, Headers, RequestOptions} from "@angular/http";
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class productervice {
-  // DonutMenu:any=[];
+
+export class productservice {
   constructor(private http: Http) { }
 
   getDonuts(): Observable <any> {

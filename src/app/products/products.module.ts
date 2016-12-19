@@ -5,7 +5,7 @@ import { DonutsComponent } from './donuts/donuts.component';
 import { HotBeveragesComponent } from './hot-beverages/hot-beverages.component';
 import { IceBeveragesComponent } from './ice-beverages/ice-beverages.component';
 import {MainRouting} from '../app.routes';
-import {productervice} from './productService';
+import {productservice} from './productService';
 @NgModule({
   imports: [
     CommonModule,
@@ -14,7 +14,7 @@ import {productervice} from './productService';
   ],
   declarations: [ProductsComponent, DonutsComponent, HotBeveragesComponent, IceBeveragesComponent],
   exports:[ProductsComponent],
-  providers : [productervice]
+  providers : [productservice]
 
 })
 export class ProductsModule { }

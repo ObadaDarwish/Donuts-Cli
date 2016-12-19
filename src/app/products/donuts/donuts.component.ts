@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {productervice} from '../productService';
+import {productservice} from '../productService';
 @Component({
   selector: 'app-donuts',
   templateUrl: './donuts.component.html',
@@ -8,7 +8,7 @@ import {productervice} from '../productService';
 export class DonutsComponent implements OnInit {
 
   DonutMenu:any;
-  constructor(private  products: productervice) {
+  constructor(private  products: productservice) {
 
   }
 

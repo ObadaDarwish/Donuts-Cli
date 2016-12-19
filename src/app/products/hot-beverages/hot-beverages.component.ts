@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {productervice} from '../productService';
+import {productservice} from '../productService';
 @Component({
   selector: 'app-hot-beverages',
   templateUrl: './hot-beverages.component.html',
@@ -7,7 +7,7 @@ import {productervice} from '../productService';
 })
 export class HotBeveragesComponent implements OnInit {
 hotBeaverage:any
-  constructor(private products:productervice) { }
+  constructor(private products:productservice) { }
 
   ngOnInit() {
     this.products.getHotBeverages().subscribe(
