@@ -9,9 +9,11 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {ProductsModule} from './products/products.module';
 import {CateringModule} from './catering/catering.module';
+import {SimpleNotificationsModule} from 'angular2-notifications/src/simple-notifications.module';
+
 @NgModule({
   declarations: [AppComponent,FooterComponent,HeaderComponent],
-  imports: [BrowserModule, FormsModule, HttpModule,HomeModule,ProductsModule,CateringModule,MainRouting], /*import modules,Routes*/
+  imports: [BrowserModule, FormsModule, HttpModule,HomeModule,ProductsModule,CateringModule,SimpleNotificationsModule,MainRouting], /*import modules,Routes*/
    providers: [],
   bootstrap: [AppComponent]
 })
