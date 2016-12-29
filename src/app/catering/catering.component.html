@@ -1,3 +1,53 @@
-<p>
-  catering works!
-</p>
+<div class="CateringBody">
+  <div class="CateringContainer container">
+    <div class="Title">
+      <p>
+        Personal Details
+      </p>
+    </div>
+    <form>
+      <!--personal details-->
+      <div class="row">
+        <div class="col-lg-6 ">
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="col-lg-6 ">
+          <label for="pwd">Mobile Number:</label>
+          <input type="text" class="form-control" id="pwd">
+        </div>
+        <div class="col-lg-6 ">
+          <label for="mail">Email:</label>
+          <input type="email" class="form-control" id="mail">
+        </div>
+        <div class="col-lg-6 ">
+          <label for="address">Delivery Address:</label>
+          <input type="text" class="form-control" id="address">
+        </div>
+      </div>
+      <!--catering order-->
+
+    </form>
+    <div class="Title">
+      <p>
+        Catering order
+      </p>
+    </div>
+    <form [formGroup]="CateringOrder" >
+      <div formArrayName="orders">
+        <div *ngFor="let order of CateringOrder.controls.orders.controls; let i=index">
+          <div>
+            <p><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Order {{i + 1}}</p>
+            <i (click)="removeorder(i)"class="fa fa-times pull-right" aria-hidden="true" *ngIf="CateringOrder.controls.orders.controls.length > 1"></i>
+          </div>
+          <div [formGroupName]="i">
+            <app-order [group]="CateringOrder.controls.orders.controls[i]"></app-order>
+          </div>
+        </div>
+      </div>
+      <div class="CateringAddMore" (click)="addorder()" >Add more <i class="fa fa-plus" aria-hidden="true"></i></div>
+      <button (click)="sumbitOrder()" class="btn btn-primary CateringButton" type="submit">Submit</button>
+      </form>
+
+  </div>
+</div>
