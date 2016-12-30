@@ -11,19 +11,19 @@
       <div class="row">
         <div class="col-lg-6 ">
           <label for="usr">Name:</label>
-          <input type="text" class="form-control" id="usr" formControlName="username">
+          <input type="text" class="form-control" id="usr" required formControlName="username">
         </div>
         <div class="col-lg-6 ">
           <label for="num">Mobile Number:</label>
-            <input type="text" class="form-control" id="num" formControlName="mobilenumber">
+            <input type="text" class="form-control" id="num" required formControlName="mobilenumber">
         </div>
         <div class="col-lg-6 ">
           <label for="mail">Email:</label>
-          <input type="email" class="form-control" id="mail" formControlName="email">
+          <input type="email" class="form-control" id="mail" required formControlName="email">
         </div>
         <div class="col-lg-6 ">
           <label for="address">Delivery Address:</label>
-          <input type="text" class="form-control" id="address" formControlName="address">
+          <input type="text" class="form-control" id="address" required formControlName="address">
         </div>
       </div>
       <!--catering order-->
@@ -52,3 +52,4 @@
 
   </div>
 </div>
+<simple-notifications [options]="options"></simple-notifications>

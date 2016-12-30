@@ -2,11 +2,11 @@
   <div class="row spacer" [formGroup]="orderForm">
     <div class="col-lg-6  ">
       <label for="donutsNumber">Number of Donuts:</label>
-      <input type="number" id="donutsNumber" min="0" formControlName="DonutsNumber">
+      <input type="number" id="donutsNumber" min="0" required formControlName="DonutsNumber">
     </div>
     <div class="col-lg-6 ">
       <label for="dressing">Donuts Dressing:</label>
-      <select class="form-control" id="dressing"  formControlName="DonutsDressing">
+      <select class="form-control" id="dressing" required formControlName="DonutsDressing">
         <option value="" disabled selected>---- Choose your Dressing ----</option>
         <option>1</option>
         <option>2</option>
@@ -16,7 +16,7 @@
     </div>
     <div class="col-lg-6 ">
       <label for="toppings">Donuts Toppings</label>
-      <select class="form-control" id="toppings" formControlName="DonutsTopping" >
+      <select class="form-control" id="toppings" required formControlName="DonutsTopping" >
         <option value="" disabled selected>---- Choose your Toppings ----</option>
         <option>1</option>
         <option>2</option>
@@ -26,8 +26,8 @@
     </div>
     <div class="col-lg-6 ">
       <label>Delivery date:</label>
-      <input type="date" class="deliverDate" formControlName="DeliveryDate">
-      <input type="time" class="deliveryTime" formControlName="DeliveryTime">
+      <input type="date" class="deliverDate" required formControlName="DeliveryDate">
+      <input type="time" class="deliveryTime" required formControlName="DeliveryTime">
     </div>
   </div>
 
