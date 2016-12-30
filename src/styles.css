@@ -135,7 +135,7 @@ header #RightNavigation a {
   position: absolute;
   margin-top: 38%;
   margin-left: 12%;
-  padding-left: 20%;
+  padding-left: 19%;
 
 }
 
@@ -191,7 +191,7 @@ header #RightNavigation a {
   position: absolute;
   display: block;
   background-color: #008da1;
-  width: 39.5%;
+  width: 40%;
   height: auto;
   margin-top: 12%;
   margin-left: 28%;
@@ -244,6 +244,10 @@ header #RightNavigation a {
   width: 100%;
 
 }
+.itemContainer img:hover {
+ z-index: 2;
+
+}
 
 .itemContainer p {
   position: relative;
@@ -268,6 +272,108 @@ header #RightNavigation a {
   margin-top: 3%;
 }
 
+/*======================================== Catering ================================================*/
+.CateringBody {
+  position: relative;
+  display: block;
+  min-height: 760px;
+  margin: 0;
+}
+
+.CateringContainer {
+  position: relative;
+  height: inherit;
+  margin-left: 12%;
+  margin-bottom: 10%;
+  padding-top: 15%;
+
+}
+
+.CateringContainer form {
+  height: auto;
+  width: 100%;
+  position: relative;
+  margin-left: 0%;
+  border: 1px solid #e6e1e1;
+  padding: 2%;
+}
+
+.CateringBody .CateringContainer form div {
+  position: relative;
+margin-top:1% ;
+  margin-bottom: 1%;
+}
+
+
+.CateringContainer form div label {
+  font-family: Georgia, sans-serif;
+  font-size: 20px;
+  color: #cc3256;
+  display: block;
+}
+
+.Title {
+  width: 200px;
+  height: 70px;
+  margin-top: 4%;
+  margin-bottom: 1%;
+}
+
+.Title p {
+  color: #2b4549;
+  font-family: Georgia, sans-serif;
+  font-size: 24px;
+}
+
+.Title p::after {
+  content: ' ';
+  display: block;
+  height: 1px;
+  width: 25%;
+  background-color: #cc3260;
+}
+.CateringButton{
+  margin-left: 85%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.CateringAddMore{
+  height: 30px;
+  width: 200px;
+  background-color: #10e16b;
+  text-align: center;
+  padding-top: 2px;
+  margin-left: 38%;
+  margin-top: 3% !important;
+  color: #ffffff;
+}
+.CateringAddMore:hover{
+  background-color: #21c25f;
+  cursor: pointer;
+}
+.fa-plus{
+  color: #ffffff;
+  margin-left: 8px;
+}
+.deliverDate{
+  height: 40px;
+  width: 50%;
+  font-size: 18px;
+  color: gray;
+  border-radius: 4px;
+}
+.deliveryTime{
+  height: 40px;
+  width: 49%;
+  font-size: 18px;
+  color: gray;
+  border-radius: 4px;
+}
+#donutsNumber{
+  width: 100%;
+  height: 38px;
+  border-radius: 4px;
+}
 /*============================ Footer ======================*/
 footer {
   background-color: #02bac5;
@@ -438,45 +544,58 @@ footer {
     margin-top: 65%;
     margin-left: 8%;
     width: 80%;
-    display: inline-block;
+    display: block;
 
   }
 
   .MainNavigation div {
-    width: 80px;
-    height: 100px;
+    width: 80%;
+    height: 50px;
     text-align: center;
+    padding-top: 6%;
+    padding-bottom: 6%;
 
   }
 
   .MainNavigation div a {
     font-size: 12px;
   }
-  .FooterLeft{
+
+  .FooterLeft {
     margin-left: 12%;
   }
-  .FooterCenter{
+
+  .FooterCenter {
     margin-left: 30%;
   }
 
-.productNavigation{
-  margin-top: 18%;
-  margin-left: 16%;
-  width: 24%;
-}
-  .productNavigation .tab{
+  .productNavigation {
+    margin-top: 25%;
+    margin-left: 5%;
+    width: auto;
+  }
+
+  .productNavigation .tab {
     width: 120px;
   }
-.productNavigation .tab a{
-  font-size: 12px;
-}
-.itemContainer{
-  width: 250px;
-  height: 250px;
-}
-  .ProductsContiner .menu{
-  margin-left: 0%;
-}
-  .itemContainer p {font-size: 12px}
+
+  .productNavigation .tab a {
+    font-size: 12px;
+  }
+
+  .itemContainer {
+    width: 250px;
+    height: 300px;
+    margin-left: 16%;
+  }
+
+  .ProductsContiner .menu {
+    margin-left: 0%;
+    margin-top: 20%;
+  }
+
+  .itemContainer p {
+    font-size: 12px
+  }
 
 }

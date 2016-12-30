@@ -12,19 +12,33 @@ export class CateringComponent implements OnInit {
   public CateringOrder: FormGroup;
   NumberOfOrders: number = 0;
   orderArray: Array<any> = [];
+  username: string;
+  mobileNumber: string;
+  email: string;
+  address: string;
 
-  constructor(private _fb: FormBuilder, private notify: NotificationsService,private cateringService:CateringService) {
+  constructor(private _fb: FormBuilder, private notify: NotificationsService, private cateringService: CateringService) {
   }
 
   ngOnInit() {
 
     this.CateringOrder = this._fb.group({
-      orders: this._fb.array([this.initorder(),])
+      orders: this._fb.array([this.initorder(),]),
+      username: [''],
+      mobilenumber: [''],
+      email: [''],
+      address: ['']
     });
 
   }
 
   sumbitOrder() {
+    this.username = this.CateringOrder.value.username;
+    this.mobileNumber = this.CateringOrder.value.mobilenumber;
+    this.email = this.CateringOrder.value.email;
+    this.address = this.CateringOrder.value.address;
+
+
     for (var _i = 0; _i <= this.NumberOfOrders; _i++) {
       this.orderArray.push({
         numberOFDonuts: this.CateringOrder.controls['orders'].value[_i].DonutsNumber,
@@ -32,14 +46,19 @@ export class CateringComponent implements OnInit {
         DonutsTopping: this.CateringOrder.controls['orders'].value[_i].DonutsTopping,
         DeliveryDate: this.CateringOrder.controls['orders'].value[_i].DeliveryDate + " " + this.CateringOrder.controls['orders'].value[_i].DeliveryTime
       });
+      // this.orderArray.push([this.CateringOrder.controls['orders'].value[_i].DonutsNumber,
+      //   this.CateringOrder.controls['orders'].value[_i].DonutsDressing,
+      //   this.CateringOrder.controls['orders'].value[_i].DonutsTopping,
+      //   this.CateringOrder.controls['orders'].value[_i].DeliveryDate + " " + this.CateringOrder.controls['orders'].value[_i].DeliveryTime
+      // ]);
     }
-    console.log(this.orderArray);
-    this.cateringService.postOrder(this.orderArray).subscribe(
-      (response)=>{
-        console.log('Done : '+ response);
+    console.log(JSON.stringify(this.orderArray));
+    this.cateringService.postOrder(this.username,this.mobileNumber,this.email,this.address,JSON.stringify(this.orderArray)).subscribe(
+      (response)=> {
+        console.log('Done : ' + response);
       },
-      (error)=>{
-        console.log('error : '+error);
+      (error)=> {
+        console.log('error : ' + error);
       }
     );
   }

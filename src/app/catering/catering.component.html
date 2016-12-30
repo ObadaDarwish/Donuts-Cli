@@ -1,39 +1,40 @@
 <div class="CateringBody">
   <div class="CateringContainer container">
+    <form [formGroup]="CateringOrder" >
     <div class="Title">
       <p>
         Personal Details
       </p>
     </div>
-    <form>
+
       <!--personal details-->
       <div class="row">
         <div class="col-lg-6 ">
           <label for="usr">Name:</label>
-          <input type="text" class="form-control" id="usr">
+          <input type="text" class="form-control" id="usr" formControlName="username">
         </div>
         <div class="col-lg-6 ">
-          <label for="pwd">Mobile Number:</label>
-          <input type="text" class="form-control" id="pwd">
+          <label for="num">Mobile Number:</label>
+            <input type="text" class="form-control" id="num" formControlName="mobilenumber">
         </div>
         <div class="col-lg-6 ">
           <label for="mail">Email:</label>
-          <input type="email" class="form-control" id="mail">
+          <input type="email" class="form-control" id="mail" formControlName="email">
         </div>
         <div class="col-lg-6 ">
           <label for="address">Delivery Address:</label>
-          <input type="text" class="form-control" id="address">
+          <input type="text" class="form-control" id="address" formControlName="address">
         </div>
       </div>
       <!--catering order-->
 
-    </form>
+
     <div class="Title">
       <p>
         Catering order
       </p>
     </div>
-    <form [formGroup]="CateringOrder" >
+
       <div formArrayName="orders">
         <div *ngFor="let order of CateringOrder.controls.orders.controls; let i=index">
           <div>

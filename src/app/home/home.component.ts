@@ -19,7 +19,5 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   }
-  testnotification(){
-    this.notification.alert('test','test');
-  }
+
 }
