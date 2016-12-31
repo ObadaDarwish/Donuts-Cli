@@ -3,6 +3,7 @@ import {FormGroup, FormArray, FormBuilder, Validators} from '@angular/forms';
 import {NotificationsService} from 'angular2-notifications/src/notifications.service';
 import {CateringService} from './catering.service';
 import {escape} from "querystring";
+import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
 @Component({
   selector: 'app-catering',
   templateUrl: './catering.component.html',
@@ -23,7 +24,7 @@ export class CateringComponent implements OnInit {
     lastOnBottom: true
   }
 
-  constructor(private _fb: FormBuilder, private notify: NotificationsService, private cateringService: CateringService) {
+  constructor(private _fb: FormBuilder, private notify: NotificationsService, private cateringService: CateringService, private loading: SlimLoadingBarService) {
   }
 
   ngOnInit() {
@@ -39,7 +40,12 @@ export class CateringComponent implements OnInit {
   }
 
   sumbitOrder() {
-    if (this.CateringOrder.valid ) {
+      this.loading.start(()=> {
+        console.log('Loading');
+      });
+
+
+    if (this.CateringOrder.valid) {
       this.username = this.CateringOrder.value.username;
       this.mobileNumber = this.CateringOrder.value.mobilenumber;
       this.email = this.CateringOrder.value.email;
@@ -60,14 +66,17 @@ export class CateringComponent implements OnInit {
 
           this.notify.success('Success', 'Order has been submitted');
           this.CateringOrder.reset();
+          this.loading.complete();
         },
         (error)=> {
-
+          this.loading.complete();
+          this.notify.error('Error', 'Order can not be submitted');
         }
       );
     }
     else {
-  this.notify.error('Error','All Fields are required');
+      this.notify.error('Error', 'All Fields are required');
+      this.loading.complete();
     }
   }
 
@@ -90,7 +99,6 @@ export class CateringComponent implements OnInit {
   removeorder(i: number) {
     const control = <FormArray>this.CateringOrder.controls['orders'];
     control.removeAt(i);
-    console.log('Close clicked');
   }
 
 }

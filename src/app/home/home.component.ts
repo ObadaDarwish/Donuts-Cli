@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {NotificationsService} from 'angular2-notifications/src/notifications.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,9 +15,11 @@ export class HomeComponent implements OnInit {
     lastOnBottom: true
   }
   constructor(private route: Router,private notification: NotificationsService ) {
+
   }
 
   ngOnInit() {
+
 
   }
 
