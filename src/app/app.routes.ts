@@ -9,12 +9,13 @@ import {CateringComponent} from './catering/catering.component';
 import {DonutsComponent} from './products/donuts/donuts.component';
 import {HotBeveragesComponent} from './products/hot-beverages/hot-beverages.component';
 import {IceBeveragesComponent} from './products/ice-beverages/ice-beverages.component';
-
+import {AboutusComponent} from './aboutus/aboutus.component';
 
 const MainRoute: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
   {path: 'Home', component: HomeComponent},
-
+  // about us
+  {path: 'Aboutus', component: AboutusComponent},
   // products
   {
     path: 'Products', component: ProductsComponent ,

@@ -1,4 +1,5 @@
 <div class="CateringBody">
+  <img src="../../assets/imgs/background5.jpg" alt="">
   <div class="CateringContainer container">
     <form [formGroup]="CateringOrder" >
     <div class="Title">
@@ -46,8 +47,8 @@
           </div>
         </div>
       </div>
-      <div class="CateringAddMore" (click)="addorder()" >Add more <i class="fa fa-plus" aria-hidden="true"></i></div>
-      <button (click)="sumbitOrder()" class="btn btn-primary CateringButton" type="submit">Submit</button>
+      <div class="CateringAddMore" (click)="addorder()" >Add more <i class="fa fa-times" aria-hidden="true"></i></div>
+      <button (click)="sumbitOrder()" class="btn btn-danger CateringButton" type="submit">Submit</button>
       </form>
 
   </div>

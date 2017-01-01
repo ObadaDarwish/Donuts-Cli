@@ -2,16 +2,16 @@
   <div class="row spacer" [formGroup]="orderForm">
     <div class="col-lg-6  ">
       <label for="donutsNumber">Number of Donuts:</label>
-      <input type="number" id="donutsNumber" min="0" required formControlName="DonutsNumber">
+      <input type="number" id="donutsNumber" min="50" required formControlName="DonutsNumber">
     </div>
     <div class="col-lg-6 ">
       <label for="dressing">Donuts Dressing:</label>
       <select class="form-control" id="dressing" required formControlName="DonutsDressing">
         <option value="" disabled selected>---- Choose your Dressing ----</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
+        <option>Chocolate</option>
+        <option>White Chocolate</option>
+        <option>Blubbery</option>
+        <option>Strawberry</option>
       </select>
     </div>
     <div class="col-lg-6 ">
