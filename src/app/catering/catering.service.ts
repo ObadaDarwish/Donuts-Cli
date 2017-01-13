@@ -7,7 +7,7 @@ export class CateringService {
 
   constructor(private http: Http) { }
 
-  postOrder(username,mobile,email,address,cateringorder) {
+  postOrder(username,mobile,email,address,deliverydate,cateringorder) {
     let headers = new Headers();
     let options = new RequestOptions({headers: headers});
     headers.append('Content-Type', 'application/json');
@@ -16,7 +16,8 @@ export class CateringService {
       email:email,
       mobile:mobile,
       address:address,
-      order:cateringorder
+      order:cateringorder,
+      deliverydate:deliverydate
     });
     return this.http.post('http://localhost:8000/CateringOrder', body, options /*{headers: headers}*/)
       .map(response => {

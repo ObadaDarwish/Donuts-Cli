@@ -18,11 +18,12 @@ export class CateringComponent implements OnInit {
   mobileNumber: string;
   email: string;
   address: string;
+  deliverydate:string;
   public options = {
     position: ["bottom", "right"],
     timeOut: 5000,
     lastOnBottom: true
-  }
+  };
 
   constructor(private _fb: FormBuilder, private notify: NotificationsService, private cateringService: CateringService, private loading: SlimLoadingBarService) {
   }
@@ -34,7 +35,9 @@ export class CateringComponent implements OnInit {
       username: ['', Validators.required],
       mobilenumber: ['', Validators.required],
       email: ['', Validators.required],
-      address: ['', Validators.required]
+      address: ['', Validators.required],
+      DeliveryDate: ['', Validators.required],
+      DeliveryTime: ['', Validators.required]
     });
 
   }
@@ -50,6 +53,7 @@ export class CateringComponent implements OnInit {
       this.mobileNumber = this.CateringOrder.value.mobilenumber;
       this.email = this.CateringOrder.value.email;
       this.address = this.CateringOrder.value.address;
+      this.deliverydate = this.CateringOrder.value.DeliveryDate + " " + this.CateringOrder.value.DeliveryTime;
 
 
       for (var _i = 0; _i <= this.NumberOfOrders; _i++) {
@@ -57,11 +61,10 @@ export class CateringComponent implements OnInit {
           numberOFDonuts: this.CateringOrder.controls['orders'].value[_i].DonutsNumber,
           DonutsDressing: this.CateringOrder.controls['orders'].value[_i].DonutsDressing,
           DonutsTopping: this.CateringOrder.controls['orders'].value[_i].DonutsTopping,
-          DeliveryDate: this.CateringOrder.controls['orders'].value[_i].DeliveryDate + " " + this.CateringOrder.controls['orders'].value[_i].DeliveryTime
-        });
+       });
       }
 
-      this.cateringService.postOrder(this.username, this.mobileNumber, this.email, this.address, JSON.stringify(this.orderArray)).subscribe(
+      this.cateringService.postOrder(this.username, this.mobileNumber, this.email, this.address,this.deliverydate, JSON.stringify(this.orderArray)).subscribe(
         (response)=> {
 
           this.notify.success('Success', 'Order has been submitted');
@@ -85,8 +88,6 @@ export class CateringComponent implements OnInit {
       DonutsNumber: ['', Validators.required],
       DonutsDressing: ['', Validators.required],
       DonutsTopping: ['', Validators.required],
-      DeliveryDate: ['', Validators.required],
-      DeliveryTime: ['', Validators.required]
     });
   }
 
