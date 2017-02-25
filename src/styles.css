@@ -5,15 +5,17 @@ app-root #loading {
   margin-top: 20%;
 }
 
-.slim-loading-bar{
+.slim-loading-bar {
   background-color: #02bac5;
 }
+
 /*---------------------------------------- Header --------------------------------------*/
-header{
+header {
   position: fixed;
   z-index: 4;
   width: 100%;
 }
+
 .headeroverlay {
   position: absolute;
   background-color: #02bac5;
@@ -27,20 +29,21 @@ header{
 
 header #LogoDiv {
   position: absolute;
-  background-color: #008da1;
-  /* opacity: 0.8; */
-  width: 150px;
-  height: 140px;
+  background-color: rgba(0, 141, 161, 0.9);
+  width: 180px;
+  height: 115px;
   margin-left: 8%;
   margin-top: 0%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
   z-index: 5;
 }
 
 #LogoDiv #BrandLogo {
   position: absolute;
-  height: 100px;
-  width: 100px;
-  margin-left: 30px;
+  height: 115px;
+  width: 90%;
+  margin-left: 0px;
   margin-top: 0px;
 }
 
@@ -49,8 +52,8 @@ header #LogoDiv {
   font-family: Old English Text MT, sans-serif;
   font-size: 20px;
   color: #f0efee;
-  margin-top: 65%;
-  margin-left: 13%;
+  margin-top: 60%;
+  margin-left: 21%;
 }
 
 #LogoDiv #BrandName:hover {
@@ -119,30 +122,35 @@ header #RightNavigation a {
   opacity: 0.4;
 }
 
-#LandingMotoText1 {
-  z-index: 1;
+.HomeMotivation {
   position: absolute;
+  width: 100%;
+  height: 30%;
+  margin-top: 12%;
+  text-align: center;
+}
+
+#LandingMotoText1 {
+
   font-family: Georgia, sans-serif;
   color: #ffffff;
-  margin-top: 17%;
-  margin-left: 25%;
-  font-size: 50px;
+  font-size: 60px;
+  margin-top: 2%;
 }
 
 #LandingMotoText2 {
-  z-index: 1;
-  position: absolute;
   font-family: Segoe Script, sans-serif;
   color: #ffffff;
-  margin-left: 32%;
-  margin-top: 24%;
-  font-size: 35px;
-}
-#LandingMotoText2 span{
-  color: #cc3256;
+  font-size: 40px;
+  margin-top: 3%;
 }
 
-  /*=====================  Webstte Main Navigation ====================*/
+#LandingMotoText2 span {
+  color: #cc3256;
+  font-weight: bold;
+}
+
+/*=====================  Webstte Main Navigation ====================*/
 .MainNavigation {
   position: absolute;
   margin-top: 38%;
@@ -195,7 +203,7 @@ header #RightNavigation a {
 .ProductsContiner .menuContainer {
   position: relative;
   margin-top: 0%;
-  margin-left: 3%;
+  margin-left: 0%;
 }
 
 /*product Navigation*/
@@ -236,28 +244,30 @@ header #RightNavigation a {
 
 .ProductsContiner .menu {
   position: relative;
-  margin-left: 12%;
   margin-top: 15%;
+  margin-left: 0%;
+  width: 100%;
 }
 
 /*----------------------- items container ------------------------------------*/
+.itemWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
 
 .itemContainer {
   position: relative;
   width: 500px;
   height: 500px;
   text-align: center;
-  margin-right: 6%;
   margin-bottom: 10%;
 }
 
 .itemContainer img {
   position: relative;
   width: 100%;
-
-}
-.itemContainer img:hover {
- z-index: 2;
+  z-index: 1;
 
 }
 
@@ -269,18 +279,23 @@ header #RightNavigation a {
 }
 
 .itemContainer .itemTitle {
+  display: none;
   position: absolute;
-  z-index: 1;
-  width: 60%;
-  height: 10%;
+  z-index: 2;
+  width: 100%;
+  height: 67%;
   text-align: center;
-  margin-left: 18.5%;
-  margin-top: 27%;
-  background-color: #ffffff;
+  margin-left: 0%;
+  margin-top: 0%;
+  background-color: rgba(6, 6, 6, 0.6);
+}
+
+.itemContainer:hover .itemTitle {
+  display: block;
 }
 
 .itemTitle p {
-  color: #008da1;
+  color: #ffffff;
   margin-top: 3%;
 }
 
@@ -291,10 +306,12 @@ header #RightNavigation a {
   min-height: 760px;
   margin: 0;
 }
-.CateringBody img{
+
+.CateringBody img {
   width: 100%;
   position: absolute;
 }
+
 .CateringContainer {
   position: relative;
   height: inherit;
@@ -310,19 +327,20 @@ header #RightNavigation a {
   position: relative;
   margin-left: 0%;
   padding: 2%;
-  background: #ffffff;
   border-radius: 10px;
+  background: rgba(249, 233, 236, 0.95);
 }
-.CateringContainer p{
+
+.CateringContainer p {
   color: #024d5a;
   font-weight: bold;
 }
+
 .CateringBody .CateringContainer form div {
   position: relative;
-margin-top:1% ;
+  margin-top: 1%;
   margin-bottom: 1%;
 }
-
 
 .CateringContainer form div label {
   font-family: Georgia, sans-serif;
@@ -334,7 +352,7 @@ margin-top:1% ;
 .Title {
   width: 220px;
   height: 70px;
-  margin-top:  4% !important;
+  margin-top: 4% !important;
   margin-bottom: 1%;
 }
 
@@ -351,12 +369,14 @@ margin-top:1% ;
   width: 25%;
   background-color: #cc3260;
 }
-.CateringButton{
+
+.CateringButton {
   margin-left: 85%;
   margin-top: 5%;
   margin-bottom: 2%;
 }
-.CateringAddMore{
+
+.CateringAddMore {
   height: 30px;
   width: 200px;
   background-color: #008da1;
@@ -366,42 +386,49 @@ margin-top:1% ;
   margin-top: 3% !important;
   color: #ffffff;
 }
-.CateringAddMore:hover{
+
+.CateringAddMore:hover {
   background-color: #00A1B5;
   cursor: pointer;
 }
-.fa-plus{
+
+.fa-plus {
   color: #ffffff;
   margin-left: 8px;
 }
-.deliverDate{
+
+.deliverDate {
   height: 40px;
   width: 50%;
   font-size: 18px;
   color: gray;
   border-radius: 4px;
 }
-.deliveryTime{
+
+.deliveryTime {
   height: 40px;
   width: 49%;
   font-size: 18px;
   color: gray;
   border-radius: 4px;
 }
-#donutsNumber{
+
+#donutsNumber {
   width: 100%;
   height: 38px;
   border-radius: 4px;
 }
+
 /*========================================= about us ===============================================*/
-.aboutusBody{
+.aboutusBody {
 
   position: relative;
   display: block;
   min-height: 760px;
   margin: 0;
 }
-.aboutusContainer{
+
+.aboutusContainer {
   position: relative;
   height: inherit;
   margin-top: 0%;
@@ -411,65 +438,152 @@ margin-top:1% ;
   padding-right: 0;
 }
 
-.WhoAreWe{
+.WhoAreWe {
   position: relative;
   height: 350px;
 }
 
-.WhatWeAre{
+.WhatWeAre {
   position: relative;
   height: 350px;
 }
-.Values{
+
+/*================================ Vision ===========================*/
+.Vision {
   position: relative;
   height: 400px;
 }
-.MeetTheTeam{
+
+/*================================ our story ===================*/
+.Ourstory {
   position: relative;
   height: 400px;
 }
-.AboutUsTitle{
+
+/*================================ values ===========================*/
+.Values {
+  position: relative;
+  height: 480px;
+}
+
+.Values .valuesimages {
+  width: 180px;
+  height: 180px;
+  margin-left: 31%;
+  display: block;
+}
+
+.Values .valuerow {
   position: absolute;
-  background-color: #ffffff;
+  margin-top: 12%;
+  text-align: center;
+}
+
+.Values h2 {
+  color: #ffffff;
+  font-family: Georgia, sans-serif;
+}
+
+.Coverimg {
+  width: 100%;
+  height: 400px;
+  position: absolute !important;
+  margin-top: 5%;
+  z-index: -2;
+}
+
+.CoverOverlay {
+  width: 100%;
+  height: 400px;
+  position: absolute !important;
+  margin-top: 5%;
+  z-index: -1;
+  background-color: #000000;
+  opacity: 0.6;
+
+}
+
+/*===================================== Meet the team ===============================*/
+.MeetTheTeam {
+  position: relative;
+  height: 850px;
+}
+
+.MeetTheTeam p {
+  color: #cc3256;
+  font-size: 16px;
+  font-family: Georgia, sans-serif;
+  margin-top: 8%;
+}
+
+.MeetTheTeam .Darwish {
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 10%;
+  width: 600px;
+  text-align: center;
+}
+
+.MeetTheTeam .Sawy {
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 27%;
+  width: 600px;
+  text-align: center;
+}
+
+.MeetTheTeam .Hamouda {
+  position: absolute;
+  margin-left: 46%;
+  margin-top: 19%;
+  width: 600px;
+  text-align: center;
+}
+
+.MeetTheTeam .Krama {
+  position: absolute;
+  margin-left: 46%;
+  margin-top: 36%;
+  width: 600px;
+  text-align: center;
+}
+
+.MeetTheTeam img {
+  width: 200px;
+  height: 200px;
+}
+
+.AboutUsTitle {
+  position: absolute;
+  background-color: #f7eeee;
   font-size: 25px;
   color: #cc3256;
-  width: 220px;
-  height: 70px;
+  width: 220px !important;
+  height: 60px !important;
   margin-left: 43%;
+  margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 10px;
+  border-bottom: 1px solid #cc3256;
 }
-.aboutusContainer .row div .AboutUsTitle{
+
+.aboutusContainer .row div .AboutUsTitle {
   margin-left: 30%;
 }
+
 .aboutusContainer .row {
   width: 100%;
 }
-.Content{
+
+.Content {
   width: 97%;
   position: absolute;
   margin-top: 7%;
   text-align: center;
   padding: 2%;
 }
-.Coverimg{
-  width: 100%;
-  height: 400px;
-  position: absolute !important;
-  margin-top: 2%;
-  z-index: -2;
-}
-.CoverOverlay{
-  width: 100%;
-  height: 400px;
-  position: absolute !important;
-  margin-top: 2%;
-  z-index: -1;
-  background-color: #000000;
-  opacity: 0.6;
 
-
-}
 /*============================ Footer ======================*/
 footer {
   background-color: #02bac5;
@@ -547,9 +661,10 @@ footer {
 
 /*=================== font awsome icons =====================*/
 
-.fa-times:hover{
- cursor: pointer;
+.fa-times:hover {
+  cursor: pointer;
 }
+
 .fa-map-marker {
   color: #f8f7f6;
   margin-right: 10px;
@@ -613,16 +728,16 @@ footer {
     height: 400px;
   }
 
+  .HomeMotivation {
+    margin-top: 30%;
+  }
+
   #LandingMotoText1 {
     font-size: 20px;
-    margin-left: 10%;
-    margin-top: 42%;
   }
 
   #LandingMotoText2 {
     font-size: 20px;
-    margin-top: 50%;
-    margin-left: 30%;
   }
 
   .learnMoreButton {
@@ -632,7 +747,7 @@ footer {
 
   header #RightNavigation {
 
-    margin-left: 7%;
+    margin-left: 0%;
   }
 
   header #RightNavigation a {
@@ -698,4 +813,13 @@ footer {
     font-size: 12px
   }
 
+  .CateringContainer {
+    margin-left: 0%;
+    margin-top: 0%;
+    padding-top: 30%;
+    padding-left: 2%;
+  }
+  .CateringButton{
+    margin-left: 70%;
+  }
 }
