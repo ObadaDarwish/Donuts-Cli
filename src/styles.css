@@ -554,7 +554,6 @@ header #RightNavigation a {
   text-align: center;
   width: 100%;
   position: relative;
-  height: 850px;
   background: #dadada;
 
 }
@@ -564,6 +563,7 @@ header #RightNavigation a {
   flex-flow: row wrap;
   justify-content: space-around;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 
@@ -840,4 +840,19 @@ footer {
 .Content p {
   font-size: 12px;
 }
+  .ValueItem{
+    width:200px ;
+  }
+  .valuesimages
+  {
+    width: 100%;
+    height: 100px;
+  }
+  .ValueItem h2 {
+    font-size: 16px;
+  }
+  .valuerow{
+    margin-top: 30%
+  }
+
 }
