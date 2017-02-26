@@ -431,6 +431,9 @@ header #RightNavigation a {
 .aboutusContainer {
   position: relative;
   height: inherit;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   margin-top: 0%;
   padding-top: 15%;
   width: 100%;
@@ -439,151 +442,163 @@ header #RightNavigation a {
 }
 
 .WhoAreWe {
-  position: relative;
   height: 350px;
+  width: 700px;
+  text-align: center;
+  border: 1px solid #b9b9b9;
+  box-shadow: 1px 1px 5px;
+  margin-bottom: 2%;
 }
 
 .WhatWeAre {
-  position: relative;
   height: 350px;
+  width: 700px;
+  text-align: center;
+  border: 1px solid #b9b9b9;
+  box-shadow: 1px 1px 5px;
+  margin-bottom: 2%;
+}
+.Content {
+  position: relative;
+  margin-top: 7%;
+  text-align: center;
+  padding: 2%;
+}
+.AboutUsTitle {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  font-size: 25px;
+  color: #cc3256;
+}
+.AboutUsTitle::after{
+  content: '';
+  display: block;
+  height: 1px;
+  width: 10%;
+  margin-left: 45%;
+  background-color: #02bac5;
 }
 
 /*================================ Vision ===========================*/
 .Vision {
   position: relative;
   height: 400px;
+  width: 100%;
+  text-align: center;
+  background: #dadada;
 }
 
 /*================================ our story ===================*/
 .Ourstory {
+  text-align: center;
+  width: 100%;
   position: relative;
   height: 400px;
+
 }
 
 /*================================ values ===========================*/
 .Values {
+  border: 1px solid #b9b9b9;
+  box-shadow: 1px 1px 5px;
   position: relative;
-  height: 480px;
-}
-
-.Values .valuesimages {
-  width: 180px;
-  height: 180px;
-  margin-left: 31%;
-  display: block;
-}
-
-.Values .valuerow {
-  position: absolute;
-  margin-top: 12%;
+  height: 515px;
+  width: 100%;
   text-align: center;
 }
-
-.Values h2 {
-  color: #ffffff;
-  font-family: Georgia, sans-serif;
+.valuesWrapper{
+  width:100%;
+  position: relative;
+  height: 400px;
 }
 
 .Coverimg {
   width: 100%;
-  height: 400px;
-  position: absolute !important;
-  margin-top: 5%;
-  z-index: -2;
+  height: inherit;
 }
 
 .CoverOverlay {
   width: 100%;
-  height: 400px;
-  position: absolute !important;
-  margin-top: 5%;
-  z-index: -1;
-  background-color: #000000;
-  opacity: 0.6;
+  height: inherit;
+  position: absolute ;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
 
 }
+.valuerow{
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  height: inherit;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.ValueItem{
+  width:250px ;
+  height:inherit;
+  padding-top: 7%;
+}
+.valuesimages
+{
+  width: 100%;
+  height: 150px;
+}
+.ValueItem h2 {
+  color: #ffffff;
+  font-family: Georgia,sans-serif;
 
+}
 /*===================================== Meet the team ===============================*/
 .MeetTheTeam {
+  text-align: center;
+  width: 100%;
   position: relative;
   height: 850px;
+  background: #dadada;
+
+}
+.CardWrapper{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 5%;
 }
 
-.MeetTheTeam p {
-  color: #cc3256;
+
+.MeetTheTeam .PersonalCard {
+  position: relative;
+  width: 330px;
+  text-align: center;
+  background: #ffffff;
+}
+.PersonalCard img {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 5%;
+}
+
+.MeetTheTeam .PersonalIntro{
+  font-family: Georgia,sans-serif;
   font-size: 16px;
-  font-family: Georgia, sans-serif;
-  margin-top: 8%;
+  color: #000000;
 }
-
-.MeetTheTeam .Darwish {
-  position: absolute;
-  margin-left: 12%;
-  margin-top: 10%;
-  width: 600px;
-  text-align: center;
-}
-
-.MeetTheTeam .Sawy {
-  position: absolute;
-  margin-left: 12%;
-  margin-top: 27%;
-  width: 600px;
-  text-align: center;
-}
-
-.MeetTheTeam .Hamouda {
-  position: absolute;
-  margin-left: 46%;
-  margin-top: 19%;
-  width: 600px;
-  text-align: center;
-}
-
-.MeetTheTeam .Krama {
-  position: absolute;
-  margin-left: 46%;
-  margin-top: 36%;
-  width: 600px;
-  text-align: center;
-}
-
-.MeetTheTeam img {
-  width: 200px;
-  height: 200px;
-}
-
-.AboutUsTitle {
-  position: absolute;
-  background-color: #f7eeee;
-  font-size: 25px;
-  color: #cc3256;
-  width: 220px !important;
-  height: 60px !important;
-  margin-left: 43%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  text-align: center;
-  padding-top: 10px;
-  border-bottom: 1px solid #cc3256;
-}
-
-.aboutusContainer .row div .AboutUsTitle {
-  margin-left: 30%;
-}
-
-.aboutusContainer .row {
+.MeetTheTeam .PersonalIntro::after{
+  display: block;
+  content: '';
+  height: 3px;
+  background: #dadada;
   width: 100%;
 }
-
-.Content {
-  width: 97%;
-  position: absolute;
-  margin-top: 7%;
-  text-align: center;
-  padding: 2%;
+.MeetTheTeam .PersonalID{
+  width: 100%;
 }
-
+.PersonalID img{
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+}
 /*============================ Footer ======================*/
 footer {
   background-color: #02bac5;
@@ -822,4 +837,7 @@ footer {
   .CateringButton{
     margin-left: 70%;
   }
+.Content p {
+  font-size: 12px;
+}
 }
