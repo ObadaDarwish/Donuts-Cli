@@ -7,6 +7,7 @@ import { IceBeveragesComponent } from './ice-beverages/ice-beverages.component';
 import {MainRouting} from '../app.routes';
 import {productservice} from './productService';
 import {SimpleNotificationsModule} from 'angular2-notifications/src/simple-notifications.module';
+import {NotificationsService} from 'angular2-notifications/src/notifications.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,7 +16,7 @@ import {SimpleNotificationsModule} from 'angular2-notifications/src/simple-notif
   ],
   declarations: [ProductsComponent, DonutsComponent, HotBeveragesComponent, IceBeveragesComponent],
   exports:[ProductsComponent],
-  providers : [productservice]
+  providers : [productservice,NotificationsService]
 
 })
 export class ProductsModule { }

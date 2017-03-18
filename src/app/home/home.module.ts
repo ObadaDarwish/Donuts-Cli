@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import {MainRouting}from '../app.routes';
 import {SimpleNotificationsModule} from 'angular2-notifications/src/simple-notifications.module';
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import {NotificationsService} from 'angular2-notifications/src/notifications.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -12,6 +13,7 @@ import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
     SlimLoadingBarModule
   ],
   declarations: [HomeComponent],
-  exports:[HomeComponent]
+  exports:[HomeComponent],
+  providers:[NotificationsService]
 })
 export class HomeModule { }

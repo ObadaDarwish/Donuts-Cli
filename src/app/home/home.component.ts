@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     position: ["bottom", "right"],
     timeOut: 5000,
     lastOnBottom: true
-  }
+  };
   constructor(private route: Router,private notification: NotificationsService ) {
 
   }
