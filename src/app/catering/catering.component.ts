@@ -26,6 +26,7 @@ export class CateringComponent implements OnInit {
   };
 
   constructor(private _fb: FormBuilder, private notify: NotificationsService, private cateringService: CateringService, private loading: SlimLoadingBarService) {
+
   }
 
   ngOnInit() {
@@ -43,44 +44,45 @@ export class CateringComponent implements OnInit {
   }
 
   sumbitOrder() {
-      this.loading.start(()=> {
-        console.log('Loading');
-      });
-
-
-    if (this.CateringOrder.valid) {
-      this.username = this.CateringOrder.value.username;
-      this.mobileNumber = this.CateringOrder.value.mobilenumber;
-      this.email = this.CateringOrder.value.email;
-      this.address = this.CateringOrder.value.address;
-      this.deliverydate = this.CateringOrder.value.DeliveryDate + " " + this.CateringOrder.value.DeliveryTime;
-
-
-      for (var _i = 0; _i <= this.NumberOfOrders; _i++) {
-        this.orderArray.push({
-          numberOFDonuts: this.CateringOrder.controls['orders'].value[_i].DonutsNumber,
-          DonutsDressing: this.CateringOrder.controls['orders'].value[_i].DonutsDressing,
-          DonutsTopping: this.CateringOrder.controls['orders'].value[_i].DonutsTopping,
-       });
-      }
-
-      this.cateringService.postOrder(this.username, this.mobileNumber, this.email, this.address,this.deliverydate, JSON.stringify(this.orderArray)).subscribe(
-        (response)=> {
-
-          this.notify.success('Success', 'Order has been submitted');
-          this.CateringOrder.reset();
-          this.loading.complete();
-        },
-        (error)=> {
-          this.loading.complete();
-          this.notify.error('Error', 'Order can not be submitted');
-        }
-      );
-    }
-    else {
-      this.notify.error('Error', 'All Fields are required');
-      this.loading.complete();
-    }
+    this.notify.info('Info','Sorry this service is not available at the current moment');
+    //   this.loading.start(()=> {
+    //     console.log('Loading');
+    //   });
+    //
+    //
+    // if (this.CateringOrder.valid) {
+    //   this.username = this.CateringOrder.value.username;
+    //   this.mobileNumber = this.CateringOrder.value.mobilenumber;
+    //   this.email = this.CateringOrder.value.email;
+    //   this.address = this.CateringOrder.value.address;
+    //   this.deliverydate = this.CateringOrder.value.DeliveryDate + " " + this.CateringOrder.value.DeliveryTime;
+    //
+    //
+    //   for (var _i = 0; _i <= this.NumberOfOrders; _i++) {
+    //     this.orderArray.push({
+    //       numberOFDonuts: this.CateringOrder.controls['orders'].value[_i].DonutsNumber,
+    //       DonutsDressing: this.CateringOrder.controls['orders'].value[_i].DonutsDressing,
+    //       DonutsTopping: this.CateringOrder.controls['orders'].value[_i].DonutsTopping,
+    //    });
+    //   }
+    //
+    //   this.cateringService.postOrder(this.username, this.mobileNumber, this.email, this.address,this.deliverydate, JSON.stringify(this.orderArray)).subscribe(
+    //     (response)=> {
+    //
+    //       this.notify.success('Success', 'Order has been submitted');
+    //       this.CateringOrder.reset();
+    //       this.loading.complete();
+    //     },
+    //     (error)=> {
+    //       this.loading.complete();
+    //       this.notify.error('Error', 'Order can not be submitted');
+    //     }
+    //   );
+    // }
+    // else {
+    //   this.notify.error('Error', 'All Fields are required');
+    //   this.loading.complete();
+    // }
   }
 
   initorder() {

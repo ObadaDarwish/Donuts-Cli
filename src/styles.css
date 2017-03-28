@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
+body {
+  background:#004c57;
+}
 app-root #loading {
   margin-left: 45%;
   margin-top: 20%;
@@ -30,8 +32,10 @@ header {
 header #LogoDiv {
   position: absolute;
   background-color: rgba(0, 141, 161, 0.9);
-  width: 180px;
-  height: 115px;
+  width: 200px;
+  height: 140px;
+  padding-top: 1%;
+  border-radius: 0px 0px 10px 10px;
   margin-left: 8%;
   margin-top: 0%;
   padding-left: 0.5%;
@@ -114,12 +118,10 @@ header #RightNavigation a {
 }
 
 #BackgroundOverlay {
-  display: none;
   position: absolute;
-  background-color: #8c8c8c;
+  background-color: rgba(6, 6, 6, 0.3);
   width: 100%;
   height: inherit;
-  opacity: 0.4;
 }
 
 .HomeMotivation {
@@ -154,36 +156,54 @@ header #RightNavigation a {
 .MainNavigation {
   position: absolute;
   margin-top: 38%;
-  margin-left: 12%;
-  padding-left: 19%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+ justify-content: center;
 
 }
 
 .MainNavigation div {
   background-color: #ffffff;
-  opacity: 0.6;
-  margin: 1%;
   text-align: center;
-  padding-top: 13%;
-  padding-bottom: 13%;
-  padding-left: 0%;
-  width: 250px;
+  width: 400px;
+  height: 300px;
   display: inline-block;
+  overflow: hidden;
+  margin-right: 1%;
 }
 
-.MainNavigation div:hover {
-  background-color: #ffffff;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.MainNavigation div a {
-  color: black;
+.MainNavigation div p {
+  width: inherit;
+  color: #ffffff;
   font-family: Georgia, sans-serif;
-  font-size: 22px;
-  text-decoration: none;
+  font-size: 30px;
   font-weight: bold;
+  position: absolute;
+  z-index: 4;
+  background: #02bac5;
+  margin-top: 10%;
 }
+
+.MainNavigation div img {
+  width: inherit;
+  height: inherit;
+  /*position: absolute;*/
+  transition: 0.3s;
+}
+
+.MainNavigation div img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/*.MainNavigation div .navigationOverlay{*/
+/*display: none;*/
+/*background: rgba(72, 72, 72, 0.5);*/
+/*position: absolute;*/
+/*width: inherit;*/
+/*height: inherit;*/
+/*}*/
 
 /*============================ ProductsContiner ================================= */
 
@@ -421,7 +441,7 @@ header #RightNavigation a {
 
 /*========================================= about us ===============================================*/
 .aboutusBody {
-
+background: #ffffff;
   position: relative;
   display: block;
   min-height: 760px;
@@ -458,25 +478,28 @@ header #RightNavigation a {
   box-shadow: 1px 1px 5px;
   margin-bottom: 2%;
 }
+
 .Content {
   position: relative;
   margin-top: 7%;
   text-align: center;
   padding: 2%;
 }
+
 .AboutUsTitle {
   margin-top: 3%;
   margin-bottom: 2%;
   font-size: 25px;
-  color: #cc3256;
+  color: #750000;
 }
-.AboutUsTitle::after{
+
+.AboutUsTitle::after {
   content: '';
   display: block;
   height: 1px;
   width: 10%;
   margin-left: 45%;
-  background-color: #02bac5;
+  background-color: #cc3256;
 }
 
 /*================================ Vision ===========================*/
@@ -485,7 +508,7 @@ header #RightNavigation a {
   height: 400px;
   width: 100%;
   text-align: center;
-  background: #dadada;
+  background: #ffffff;
 }
 
 /*================================ our story ===================*/
@@ -494,70 +517,79 @@ header #RightNavigation a {
   width: 100%;
   position: relative;
   height: 400px;
-
+background: #ffffff;
 }
 
 /*================================ values ===========================*/
 .Values {
+  background: #007080;
   border: 1px solid #b9b9b9;
   box-shadow: 1px 1px 5px;
   position: relative;
-  height: 515px;
+  min-height: 450px;
   width: 100%;
   text-align: center;
 }
-.valuesWrapper{
-  width:100%;
+
+.valuesWrapper {
+  width: 100%;
   position: relative;
-  height: 400px;
-}
-
-.Coverimg {
-  width: 100%;
-  height: inherit;
-}
-
-.CoverOverlay {
-  width: 100%;
-  height: inherit;
-  position: absolute ;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
 
 }
-.valuerow{
+
+.valuerow {
   width: 100%;
-  position: absolute;
-  z-index: 2;
-  height: inherit;
+  position: relative;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
 }
-.ValueItem{
-  width:250px ;
-  height:inherit;
-  padding-top: 7%;
-}
-.valuesimages
-{
+
+.ValueItem {
   width: 100%;
-  height: 150px;
-}
-.ValueItem h2 {
-  color: #ffffff;
-  font-family: Georgia,sans-serif;
+  position: relative;
+  padding-top: 3%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 3%;
 
 }
+
+.valuesimages {
+  width: 500px;
+  height: 350px;
+}
+
+.ValueItem h2 {
+  color: #ffffff;
+  font-family: Georgia, sans-serif;
+  margin-bottom: 10%;
+
+}
+
+.ValueItem p {
+  color: #ffffff;
+  font-family: Georgia, sans-serif;
+  font-size: 20px;
+  border-left: 5px solid #cc3256;
+  line-height: 40px;
+}
+
+.ValueItem .itemTextWrapper {
+  width: 45%;
+}
+
 /*===================================== Meet the team ===============================*/
 .MeetTheTeam {
   text-align: center;
   width: 100%;
   position: relative;
-  background: #dadada;
+  background: #007080;
 
 }
-.CardWrapper{
+
+.CardWrapper {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -566,39 +598,59 @@ header #RightNavigation a {
   margin-bottom: 5%;
 }
 
-
 .MeetTheTeam .PersonalCard {
   position: relative;
   width: 330px;
   text-align: center;
   background: #ffffff;
 }
+
 .PersonalCard img {
   width: 100%;
   height: 280px;
   margin-bottom: 5%;
 }
 
-.MeetTheTeam .PersonalIntro{
-  font-family: Georgia,sans-serif;
+.MeetTheTeam .PersonalIntro {
+  font-family: Georgia, sans-serif;
   font-size: 16px;
   color: #000000;
+  margin-bottom: 0px;
 }
-.MeetTheTeam .PersonalIntro::after{
+
+.MeetTheTeam .PersonalIntro::after {
   display: block;
   content: '';
   height: 3px;
-  background: #dadada;
+  background: #007080;
   width: 100%;
+  margin-top: 5%;
 }
-.MeetTheTeam .PersonalID{
+
+.MeetTheTeam .PersonalID {
   width: 100%;
+  background-color: #109ea7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='55' viewBox='0 0 52 52'%3E%3Cpath fill='%23007080' fill-opacity='0.4' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+
 }
-.PersonalID img{
+
+.PersonalID img {
   width: 80px;
   height: 80px;
   border-radius: 100px;
+  margin-top: 5%;
 }
+
+.PersonalID h3 {
+  color: #ffffff;
+}
+
+.PersonalID p {
+  margin-bottom: 0;
+  color: #ffffff;
+  padding-bottom: 3%;
+}
+
 /*============================ Footer ======================*/
 footer {
   background-color: #02bac5;
@@ -771,25 +823,19 @@ footer {
   }
 
   .MainNavigation {
-    margin-top: 65%;
-    margin-left: 8%;
-    width: 80%;
-    display: block;
-
+    margin-top: 52%;
   }
 
   .MainNavigation div {
-    width: 80%;
-    height: 50px;
-    text-align: center;
-    padding-top: 6%;
-    padding-bottom: 6%;
-
+    width: 220px;
+    height: 100px;
+    margin-bottom: 1%;
   }
 
-  .MainNavigation div a {
+  .MainNavigation div p {
     font-size: 12px;
   }
+
 
   .FooterLeft {
     margin-left: 12%;
@@ -834,24 +880,29 @@ footer {
     padding-top: 30%;
     padding-left: 2%;
   }
-  .CateringButton{
+
+  .CateringButton {
     margin-left: 70%;
   }
-.Content p {
-  font-size: 12px;
-}
-  .ValueItem{
-    width:200px ;
+
+  .Content p {
+    font-size: 12px;
   }
-  .valuesimages
-  {
+
+  .ValueItem {
+    width: 200px;
+  }
+
+  .valuesimages {
     width: 100%;
     height: 100px;
   }
+
   .ValueItem h2 {
     font-size: 16px;
   }
-  .valuerow{
+
+  .valuerow {
     margin-top: 30%
   }
 
