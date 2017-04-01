@@ -18,7 +18,8 @@ export class CateringComponent implements OnInit {
   mobileNumber: string;
   email: string;
   address: string;
-  deliverydate:string;
+  deliverydate: string;
+  DonutsSum: number = 0;
   public options = {
     position: ["bottom", "right"],
     timeOut: 5000,
@@ -44,10 +45,10 @@ export class CateringComponent implements OnInit {
   }
 
   sumbitOrder() {
-    this.notify.info('Info','Sorry this service is not available at the current moment');
-    //   this.loading.start(()=> {
-    //     console.log('Loading');
-    //   });
+     this.notify.info('Info', 'Sorry this service is not available at the current moment');
+    // this.loading.start(()=> {
+    //   console.log('Loading');
+    // });
     //
     //
     // if (this.CateringOrder.valid) {
@@ -59,25 +60,32 @@ export class CateringComponent implements OnInit {
     //
     //
     //   for (var _i = 0; _i <= this.NumberOfOrders; _i++) {
+    //     this.DonutsSum += this.CateringOrder.controls['orders'].value[_i].DonutsNumber;
     //     this.orderArray.push({
     //       numberOFDonuts: this.CateringOrder.controls['orders'].value[_i].DonutsNumber,
     //       DonutsDressing: this.CateringOrder.controls['orders'].value[_i].DonutsDressing,
     //       DonutsTopping: this.CateringOrder.controls['orders'].value[_i].DonutsTopping,
-    //    });
+    //     });
+    //   }
+    //   if (this.DonutsSum >= 50) {
+    //     this.cateringService.postOrder(this.username, this.mobileNumber, this.email, this.address, this.deliverydate, JSON.stringify(this.orderArray)).subscribe(
+    //       (response)=> {
+    //
+    //         this.notify.success('Success', 'Order has been submitted');
+    //         this.CateringOrder.reset();
+    //         this.loading.complete();
+    //       },
+    //       (error)=> {
+    //         this.loading.complete();
+    //         this.notify.error('Error', 'Order can not be submitted');
+    //       }
+    //     );
+    //   }
+    //   else {
+    //     this.notify.info('Info', 'Total number of donuts should be greater than or equal 50');
+    //     this.loading.complete();
     //   }
     //
-    //   this.cateringService.postOrder(this.username, this.mobileNumber, this.email, this.address,this.deliverydate, JSON.stringify(this.orderArray)).subscribe(
-    //     (response)=> {
-    //
-    //       this.notify.success('Success', 'Order has been submitted');
-    //       this.CateringOrder.reset();
-    //       this.loading.complete();
-    //     },
-    //     (error)=> {
-    //       this.loading.complete();
-    //       this.notify.error('Error', 'Order can not be submitted');
-    //     }
-    //   );
     // }
     // else {
     //   this.notify.error('Error', 'All Fields are required');
